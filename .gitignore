@@ -73,7 +73,3 @@ Plugins/*/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-AsrockTest2/Binaries/*
-AsrockTest2/Intermediate/*
-AsrockTest2/Saved/*
-AsrockTest2.sln
