@@ -64,3 +64,13 @@ ASnakeGameMode* ASnakePart::GetSnakeGameMode()
 
 	return SnakeGameMode;
 }
+
+void ASnakePart::Follow()
+{
+	if (dist == nullptr)
+		return;
+
+	prevPos = GetActorLocation();
+	SetActorLocation(dist->prevPos);
+
+}

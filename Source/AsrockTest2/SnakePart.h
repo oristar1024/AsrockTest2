@@ -24,4 +24,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Follow();
+
+	ASnakePart* dist = nullptr;
+	FVector prevPos;
+	FVector curPos;
+
+
 };
