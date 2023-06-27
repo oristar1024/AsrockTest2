@@ -85,7 +85,7 @@ void ASnakeHead::LeftAction()
 
 	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
 	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
+		UE_LOG(LogTemp, Error, TEXT("Error GameOver"), __FUNCTION__, __LINE__);
 	}
 
 }
@@ -111,7 +111,7 @@ void ASnakeHead::RightAction()
 
 	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
 	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
+		UE_LOG(LogTemp, Error, TEXT("Error GameOver"), __FUNCTION__, __LINE__);
 	}
 }
 void ASnakeHead::UpAction()
@@ -137,7 +137,7 @@ void ASnakeHead::UpAction()
 
 	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
 	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
+		UE_LOG(LogTemp, Error, TEXT("Error GameOver"), __FUNCTION__, __LINE__);
 	}
 
 }
@@ -163,6 +163,6 @@ void ASnakeHead::DownAction()
 	}
 	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
 	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
+		UE_LOG(LogTemp, Error, TEXT("Error GameOver"), __FUNCTION__, __LINE__);
 	}
 }
