@@ -295,3 +295,16 @@ void ASnakeGameMode::CurBodyReset()
 {
 	CurBody = nullptr;
 }
+
+void ASnakeGameMode::SetPos(FVector _Pos)
+{
+	prevPos = curPos;
+	curPos = _Pos;
+}
+
+void ASnakeGameMode::AddBody()
+{
+	FTransform Trans;
+	Trans.SetLocation(prevPos);
+	GetWorld()->SpawnActor<AActor>(myBodyType, Trans);
+}

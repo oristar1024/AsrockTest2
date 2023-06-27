@@ -83,11 +83,6 @@ void ASnakeHead::LeftAction()
 		GetSnakeGameMode()->AddBody();
 	}
 
-	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
-	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
-	}
-
 }
 void ASnakeHead::RightAction()
 {
@@ -107,11 +102,6 @@ void ASnakeHead::RightAction()
 		Body->Destroy();
 		GetSnakeGameMode()->CurBodyReset();
 		GetSnakeGameMode()->AddBody();
-	}
-
-	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
-	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
 	}
 }
 void ASnakeHead::UpAction()
@@ -135,11 +125,6 @@ void ASnakeHead::UpAction()
 		GetSnakeGameMode()->AddBody();
 	}
 
-	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
-	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
-	}
-
 }
 void ASnakeHead::DownAction()
 {
@@ -161,8 +146,5 @@ void ASnakeHead::DownAction()
 		GetSnakeGameMode()->CurBodyReset();
 		GetSnakeGameMode()->AddBody();
 	}
-	if (true == GetSnakeGameMode()->IsPart(GetActorLocation(), "myBody"))
-	{
-		UE_LOG(LogTemp, Error, TEXT("%S(%u)> if (0 >= Y) [Y : %d][Z : %d]"), __FUNCTION__, __LINE__);
-	}
+
 }

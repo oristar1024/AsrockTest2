@@ -44,6 +44,10 @@ public:
 
 	AActor* GetPart(int _Y, int _Z, FName _Tag);
 
+	void SetPos(FVector _Pos);
+
+	void AddBody();
+
 	void CurBodyReset();
 
 protected:
@@ -74,6 +78,9 @@ private:
 
 	FRandomStream RandomCreate = FRandomStream();
 
+	FVector prevPos;
+	FVector curPos;
+
 
 	// 이번에는 변수를 블루프린트에서 세팅하고 변경하고 싶다.
 	UPROPERTY(Category = "GameModeValue", EditAnywhere, DisplayName = "바디 오브젝트 클래스")
@@ -81,4 +88,7 @@ private:
 
 	UPROPERTY(Category = "GameModeValue", EditAnywhere, DisplayName = "그냥 테스트용 변수")
 		int Value;
+
+	UPROPERTY(Category = "GameModeValue", EditAnywhere, DisplayName = "PlayerBodyClass")
+		TSubclassOf<AActor> myBodyType;
 };
